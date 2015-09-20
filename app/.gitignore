@@ -1,10 +1,4 @@
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
 /build
-/captures
 # Created by https://www.gitignore.io
 
 ### Android ###
