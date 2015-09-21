@@ -15,3 +15,6 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+#--------------- BEGIN: DbHelper ----------
+-keep class * extends java.lang.annotation.Annotation { *; }
+#--------------- END: DbHelper ----------
