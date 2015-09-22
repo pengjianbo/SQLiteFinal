@@ -12,7 +12,7 @@ SQLite ORM 库，本项目是从[xUtils](https://github.com/wyouflf/xUtils)分�
 ```groovy
 compile 'cn.finalteam.sqlitefinal:SQLiteFinal:1.0.0'
 ```
-注：SQLiteFinal依赖于[ToolsFinal](https://github.com/FinalTeam/ToolsFinal)，非Gradle抓取的应该同时下载[SQLiteFinal.jar]((https://raw.githubusercontent.com/FinalTeam/SQLiteFinal/master/downloads/SQLiteFinal-1.0.0-release.jar))和[ToolsFinal.jar](https://raw.githubusercontent.com/FinalTeam/ToolsFinal/master/downloads/ToolsFinal-1.0.0-release.jar)。
+注：SQLiteFinal依赖于[ToolsFinal](https://github.com/FinalTeam/ToolsFinal)，非Gradle抓取的应该同时下载[SQLiteFinal.jar](https://raw.githubusercontent.com/FinalTeam/SQLiteFinal/master/downloads/SQLiteFinal-1.0.0-release.jar)和[ToolsFinal.jar](https://raw.githubusercontent.com/FinalTeam/ToolsFinal/master/downloads/ToolsFinal-1.0.0-release.jar)。
 
 ###DbHelper基本功能：
 * android中的orm框架，一行代码就可以进行增删改查；
