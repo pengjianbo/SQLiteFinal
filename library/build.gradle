@@ -20,6 +20,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'cn.paojiao.toolsfinal:ToolsFinal:1.0.1'
+    compile 'cn.finalteam.toolsfinal:ToolsFinal:1.0.0'
 }
-apply from: 'https://raw.githubusercontent.com/PaoJiao/ToolsFinal/master/bintray.gradle'
+apply from: 'https://raw.githubusercontent.com/FinalTeam/ToolsFinal/master/bintray.gradle'
