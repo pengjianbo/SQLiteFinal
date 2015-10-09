@@ -8,11 +8,11 @@ SQLite ORM 库，本项目是从[xUtils](https://github.com/wyouflf/xUtils)分�
 
 --------
 ###下载SQLiteFinal
-下载这个[JAR](https://raw.githubusercontent.com/FinalTeam/SQLiteFinal/master/downloads/SQLiteFinal-1.0.1-release.jar) 或者通过Gradle抓取:
+下载这个[JAR](https://raw.githubusercontent.com/pengjianbo/SQLiteFinal/master/downloads/SQLiteFinal-1.0.1-release.jar) 或者通过Gradle抓取:
+
 ```groovy
-compile 'cn.finalteam:sqlitefinal:1.0.1'
+compile 'cn.finalteam:sqlitefinal:1.0.2'
 ```
-注：SQLiteFinal依赖于[ToolsFinal](https://github.com/FinalTeam/ToolsFinal)，非Gradle抓取的应该同时下载[SQLiteFinal.jar](https://raw.githubusercontent.com/FinalTeam/SQLiteFinal/master/downloads/SQLiteFinal-1.0.1-release.jar)和[ToolsFinal.jar](https://raw.githubusercontent.com/FinalTeam/ToolsFinal/master/downloads/ToolsFinal-1.0.2-release.jar)。
 
 ###DbHelper基本功能：
 * android中的orm框架，一行代码就可以进行增删改查；
@@ -70,3 +70,19 @@ db.execNonQuery(sql) // 执行自定义sql
 * 添加Android默认混淆配置${sdk.dir}/tools/proguard/proguard-android.txt
 * 不要混淆xUtils中的注解类型，添加混淆配置：-keep class * extends java.lang.annotation.Annotation { *; }
 * 对使用DbUtils模块持久化的实体类不要混淆，或者注解所有表和列名称@Table(name="xxx")，@Id(column="xxx")，@Column(column="xxx"),@Foreign(column="xxx",foreign="xxx")；
+
+
+License
+-------
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
