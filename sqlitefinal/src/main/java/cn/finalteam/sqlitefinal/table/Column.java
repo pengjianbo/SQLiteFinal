@@ -19,7 +19,6 @@ import android.database.Cursor;
 import cn.finalteam.sqlitefinal.converter.ColumnConverter;
 import cn.finalteam.sqlitefinal.converter.ColumnConverterFactory;
 import cn.finalteam.sqlitefinal.sqlite.ColumnDbType;
-import cn.finalteam.toolsfinal.Logger;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -61,14 +60,14 @@ public class Column {
             try {
                 setMethod.invoke(entity, value == null ? defaultValue : value);
             } catch (Throwable e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         } else {
             try {
                 this.columnField.setAccessible(true);
                 this.columnField.set(entity, value == null ? defaultValue : value);
             } catch (Throwable e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         }
     }
@@ -86,14 +85,14 @@ public class Column {
                 try {
                     fieldValue = getMethod.invoke(entity);
                 } catch (Throwable e) {
-                    Logger.e(e.getMessage(), e);
+                    //Logger.e(e.getMessage(), e);
                 }
             } else {
                 try {
                     this.columnField.setAccessible(true);
                     fieldValue = this.columnField.get(entity);
                 } catch (Throwable e) {
-                    Logger.e(e.getMessage(), e);
+                    //Logger.e(e.getMessage(), e);
                 }
             }
         }

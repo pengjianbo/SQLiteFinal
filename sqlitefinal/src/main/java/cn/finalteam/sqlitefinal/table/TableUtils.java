@@ -19,7 +19,6 @@ import android.text.TextUtils;
 import cn.finalteam.sqlitefinal.annotation.Id;
 import cn.finalteam.sqlitefinal.annotation.Table;
 import cn.finalteam.sqlitefinal.converter.ColumnConverterFactory;
-import cn.finalteam.toolsfinal.Logger;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
@@ -98,7 +97,7 @@ public class TableUtils {
                 addColumns2Map(entityType.getSuperclass(), primaryKeyFieldName, columnMap);
             }
         } catch (Throwable e) {
-            Logger.e(e.getMessage(), e);
+            //Logger.e(e.getMessage(), e);
         }
     }
 

@@ -16,7 +16,6 @@
 package cn.finalteam.sqlitefinal.table;
 
 import cn.finalteam.sqlitefinal.annotation.NoAutoIncrement;
-import cn.finalteam.toolsfinal.Logger;
 import java.lang.reflect.Field;
 import java.util.HashSet;
 
@@ -50,14 +49,14 @@ public class Id extends Column {
             try {
                 setMethod.invoke(entity, idValue);
             } catch (Throwable e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         } else {
             try {
                 this.columnField.setAccessible(true);
                 this.columnField.set(entity, idValue);
             } catch (Throwable e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         }
     }

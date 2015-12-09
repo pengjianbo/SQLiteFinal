@@ -31,7 +31,6 @@ import cn.finalteam.sqlitefinal.table.Id;
 import cn.finalteam.sqlitefinal.table.Table;
 import cn.finalteam.sqlitefinal.table.TableUtils;
 import cn.finalteam.sqlitefinal.utils.IOUtils;
-import cn.finalteam.toolsfinal.Logger;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -85,7 +84,7 @@ public class DbHelper {
                     try {
                         dao.dropDb();
                     } catch (DbException e) {
-                        Logger.e(e.getMessage(), e);
+                        //Logger.e(e.getMessage(), e);
                     }
                 }
             }
@@ -746,7 +745,7 @@ public class DbHelper {
                         execNonQuery("DROP TABLE " + tableName);
                         Table.remove(this, tableName);
                     } catch (Throwable e) {
-                        Logger.e(e.getMessage(), e);
+                        //Logger.e(e.getMessage(), e);
                     }
                 }
 
@@ -776,7 +775,7 @@ public class DbHelper {
     ///////////////////////////////////// exec sql /////////////////////////////////////////////////////
     private void debugSql(String sql) {
         if (debug) {
-            Logger.d(sql);
+            //Logger.d(sql);
         }
     }
 

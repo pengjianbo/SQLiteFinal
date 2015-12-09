@@ -22,7 +22,6 @@ import cn.finalteam.sqlitefinal.table.DbModel;
 import cn.finalteam.sqlitefinal.table.Finder;
 import cn.finalteam.sqlitefinal.table.Id;
 import cn.finalteam.sqlitefinal.table.Table;
-import cn.finalteam.toolsfinal.Logger;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class CursorUtils {
@@ -64,7 +63,7 @@ public class CursorUtils {
             }
             return entity;
         } catch (Throwable e) {
-            Logger.e(e.getMessage(), e);
+            //Logger.e(e.getMessage(), e);
         }
 
         return null;

@@ -28,7 +28,6 @@ import cn.finalteam.sqlitefinal.converter.ColumnConverter;
 import cn.finalteam.sqlitefinal.converter.ColumnConverterFactory;
 import cn.finalteam.sqlitefinal.sqlite.FinderLazyLoader;
 import cn.finalteam.sqlitefinal.sqlite.ForeignLazyLoader;
-import cn.finalteam.toolsfinal.Logger;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
@@ -75,7 +74,7 @@ public class ColumnUtils {
             try {
                 getMethod = entityType.getDeclaredMethod(methodName);
             } catch (NoSuchMethodException e) {
-                Logger.d(methodName + " not exist");
+                //Logger.d(methodName + " not exist");
             }
         }
 
@@ -96,7 +95,7 @@ public class ColumnUtils {
             try {
                 setMethod = entityType.getDeclaredMethod(methodName, field.getType());
             } catch (NoSuchMethodException e) {
-                Logger.d(methodName + " not exist");
+                //Logger.d(methodName + " not exist");
             }
         }
 
@@ -229,7 +228,7 @@ public class ColumnUtils {
         try {
             return entityType.getDeclaredMethod(methodName);
         } catch (NoSuchMethodException e) {
-            Logger.d(methodName + " not exist");
+            //Logger.d(methodName + " not exist");
         }
         return null;
     }
@@ -245,7 +244,7 @@ public class ColumnUtils {
         try {
             return entityType.getDeclaredMethod(methodName, field.getType());
         } catch (NoSuchMethodException e) {
-            Logger.d(methodName + " not exist");
+            //Logger.d(methodName + " not exist");
         }
         return null;
     }

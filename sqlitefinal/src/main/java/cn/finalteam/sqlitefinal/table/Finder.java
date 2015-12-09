@@ -4,7 +4,6 @@ import android.database.Cursor;
 import cn.finalteam.sqlitefinal.exception.DbException;
 import cn.finalteam.sqlitefinal.sqlite.ColumnDbType;
 import cn.finalteam.sqlitefinal.sqlite.FinderLazyLoader;
-import cn.finalteam.toolsfinal.Logger;
 import java.lang.reflect.Field;
 import java.util.List;
 
@@ -46,13 +45,13 @@ public class Finder extends Column {
             try {
                 value = new FinderLazyLoader(this, finderValue).getAllFromDb();
             } catch (DbException e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         } else {
             try {
                 value = new FinderLazyLoader(this, finderValue).getFirstFromDb();
             } catch (DbException e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         }
 
@@ -60,14 +59,14 @@ public class Finder extends Column {
             try {
                 setMethod.invoke(entity, value);
             } catch (Throwable e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         } else {
             try {
                 this.columnField.setAccessible(true);
                 this.columnField.set(entity, value);
             } catch (Throwable e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         }
     }

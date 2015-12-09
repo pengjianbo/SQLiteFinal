@@ -21,7 +21,6 @@ import cn.finalteam.sqlitefinal.converter.ColumnConverterFactory;
 import cn.finalteam.sqlitefinal.exception.DbException;
 import cn.finalteam.sqlitefinal.sqlite.ColumnDbType;
 import cn.finalteam.sqlitefinal.sqlite.ForeignLazyLoader;
-import cn.finalteam.toolsfinal.Logger;
 import java.lang.reflect.Field;
 import java.util.List;
 
@@ -61,13 +60,13 @@ public class Foreign extends Column {
             try {
                 value = new ForeignLazyLoader(this, fieldValue).getAllFromDb();
             } catch (DbException e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         } else {
             try {
                 value = new ForeignLazyLoader(this, fieldValue).getFirstFromDb();
             } catch (DbException e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         }
 
@@ -75,14 +74,14 @@ public class Foreign extends Column {
             try {
                 setMethod.invoke(entity, value);
             } catch (Throwable e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         } else {
             try {
                 this.columnField.setAccessible(true);
                 this.columnField.set(entity, value);
             } catch (Throwable e) {
-                Logger.e(e.getMessage(), e);
+                //Logger.e(e.getMessage(), e);
             }
         }
     }
@@ -120,7 +119,7 @@ public class Foreign extends Column {
                         columnValue = column.getColumnValue(foreignEntities.get(0));
                     }
                 } catch (Throwable e) {
-                    Logger.e(e.getMessage(), e);
+                    //Logger.e(e.getMessage(), e);
                 }
             } else {
                 try {
@@ -134,7 +133,7 @@ public class Foreign extends Column {
 
                     columnValue = column.getColumnValue(fieldValue);
                 } catch (Throwable e) {
-                    Logger.e(e.getMessage(), e);
+                    //Logger.e(e.getMessage(), e);
                 }
             }
         }

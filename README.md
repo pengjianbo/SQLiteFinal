@@ -8,10 +8,10 @@ SQLite ORM 库，本项目是从[xUtils](https://github.com/wyouflf/xUtils)分�
 
 --------
 ###下载SQLiteFinal
-下载这个[JAR](https://raw.githubusercontent.com/pengjianbo/SQLiteFinal/master/downloads/SQLiteFinal-1.0.1-release.jar) 或者通过Gradle抓取:
+下载这个[JAR](https://raw.githubusercontent.com/pengjianbo/SQLiteFinal/master/downloads/) 或者通过Gradle抓取:
 
 ```groovy
-compile 'cn.finalteam:sqlitefinal:1.0.2'
+compile 'cn.finalteam:sqlitefinal:1.0.3'
 ```
 
 ###DbHelper基本功能：
