@@ -1,6 +1,6 @@
 #SQLiteFinal简介
 SQLite ORM 库，本项目是从[xUtils](https://github.com/wyouflf/xUtils)分解出来的
-###我们后续要做一下工作
+###我们后续要做以下工作
 * 数据库表字段动态更新
 * 支持更多的数据类型
 * 更详细的使用文档
